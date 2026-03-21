@@ -2,13 +2,13 @@
 using namespace std;
 
 // Compile-time Polymorphism (Function Overloading)
-class Add {
+class Demo {
 public:
-int sum(int a, int b) {
+int add(int a, int b) {
 return a + b;
 }
 
-int sum(int a, int b, int c) {
+int add(int a, int b, int c) {
     return a + b + c;
 }
 
@@ -18,28 +18,28 @@ int sum(int a, int b, int c) {
 class Base {
 public:
 virtual void show() {
-cout << "This is Base class" << endl;
+cout << "Base class function" << endl;
 }
 };
 
 class Derived : public Base {
 public:
 void show() {
-cout << "This is Derived class" << endl;
+cout << "Derived class function" << endl;
 }
 };
 
 int main() {
+Demo d;
 
-// Compile-time Polymorphism
-Add obj;
-cout << "Sum of 2 numbers: " << obj.sum(2, 3) << endl;
-cout << "Sum of 3 numbers: " << obj.sum(2, 3, 4) << endl;
+// Compile-time
+cout << "Sum = " << d.add(2, 3) << endl;
+cout << "Sum = " << d.add(2, 3, 4) << endl;
 
-// Run-time Polymorphism
+// Run-time
 Base* b;
-Derived d;
-b = &d;
+Derived obj;
+b = &obj;
 
 b->show();
 

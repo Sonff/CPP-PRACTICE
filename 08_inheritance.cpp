@@ -2,35 +2,26 @@
 using namespace std;
 
 // Base class
-class A {
+class Animal {
 public:
-void showA() {
-cout << "This is Class A" << endl;
+void eat() {
+cout << "Animal eats" << endl;
 }
 };
 
-// Derived class from A
-class B : public A {
+// Derived class
+class Dog : public Animal {
 public:
-void showB() {
-cout << "This is Class B" << endl;
-}
-};
-
-// Derived class from B
-class C : public B {
-public:
-void showC() {
-cout << "This is Class C" << endl;
+void bark() {
+cout << "Dog barks" << endl;
 }
 };
 
 int main() {
-C obj;
+Dog d;
 
-obj.showA(); // from class A
-obj.showB(); // from class B
-obj.showC(); // from class C
+d.eat();   // inherited from Animal
+d.bark();  // own function
 
 return 0;
 
