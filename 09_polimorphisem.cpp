@@ -7,10 +7,10 @@ public:
 int add(int a, int b) {
 return a + b;
 }
-
+// daily update
 int add(int a, int b, int c) {
     return a + b + c;
-}
+}// daily update
 
 };
 
@@ -31,7 +31,7 @@ cout << "Derived class function" << endl;
 
 int main() {
 Demo d;
-
+// daily update
 // Compile-time
 cout << "Sum = " << d.add(2, 3) << endl;
 cout << "Sum = " << d.add(2, 3, 4) << endl;
@@ -43,6 +43,6 @@ b = &obj;
 
 b->show();
 
-return 0;
+return 0;// daily update
 
 }
